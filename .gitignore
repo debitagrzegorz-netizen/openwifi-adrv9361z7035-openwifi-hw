@@ -1,0 +1,27 @@
+# Vivado products for the ADRV9361 board project. Source BD and tcl stay tracked.
+*.jou
+*.log
+*.str
+*.backup.*
+boards/adrv9361z7035/ip_config/
+boards/adrv9361z7035/ip_repo/
+boards/adrv9361z7035/openwifi_adrv9361z7035/
+boards/adrv9361z7035/src/hdl/
+boards/adrv9361z7035/src/hw_handoff/
+boards/adrv9361z7035/src/ip/
+boards/adrv9361z7035/src/ipshared/
+boards/adrv9361z7035/src/sim/
+boards/adrv9361z7035/src/synth/
+boards/adrv9361z7035/src/ui/
+boards/adrv9361z7035/src/*.bda
+boards/adrv9361z7035/src/*.bxml
+boards/adrv9361z7035/src/*_ooc.xdc
+boards/adrv9361z7035_ila/
+# Files written by the IP tcl at project creation.
+ip/**/src/board_def.v
+ip/**/src/clock_speed.v
+ip/**/src/fpga_scale.v
+ip/**/src/has_side_ch_flag.v
+ip/**/src/*_pre_def.v
+ip/**/src/openwifi_hw_git_rev.v
+ip/**/src/spi_command.v

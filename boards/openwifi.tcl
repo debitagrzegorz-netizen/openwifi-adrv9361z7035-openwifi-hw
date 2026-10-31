@@ -112,7 +112,9 @@ set proj_dir [get_property directory [current_project]]
 set obj [current_project]
 set_property -name "board_part_repo_paths" -value "$board_part_repos" -objects $obj
 set_property -name "board_part" -value "$board_part_string" -objects $obj
-set_property -name "classic_soc_boot" -value "0" -objects $obj
+# Vivado 2024.2+: classic_soc_boot is removed (Classic SoC Boot deprecated).
+# Setting it aborts project creation (Common 17-69). Skip for 2025.1+.
+# set_property -name "classic_soc_boot" -value "0" -objects $obj
 set_property -name "compxlib.activehdl_compiled_library_dir" -value "$proj_dir/${_xil_proj_name_}.cache/compile_simlib/activehdl" -objects $obj
 set_property -name "compxlib.funcsim" -value "1" -objects $obj
 set_property -name "compxlib.ies_compiled_library_dir" -value "$proj_dir/${_xil_proj_name_}.cache/compile_simlib/ies" -objects $obj
