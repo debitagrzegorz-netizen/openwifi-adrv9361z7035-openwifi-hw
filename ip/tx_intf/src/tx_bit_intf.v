@@ -448,6 +448,10 @@
             if(tx_try_complete_dl2 == 1) begin
               high_tx_ctl_state  <= WAIT_CHANCE;
               tx_queue_idx_reg<=0;
+              // csma_ca takes high_trigger only in its IDLE state. If tx_control
+              // missed quit_retrans, the backoff that quit_retrans started was
+              // used by the old retransmission, and WAIT_CHANCE would wait forever.
+              high_trigger <= 1;
             end
           end
 
